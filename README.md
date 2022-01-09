@@ -24,6 +24,8 @@
 * press option + command + L to format your code
 * get the maven packages by reloading the project using maven
 * use docker client for database
+* 👀️ ****NOTE: Create first the Swagger UI or OPEN API before finishing the controller and REST API.
+* 🚀️ ****NOTE:  Always run the application every time you create or a new file to check if it's still working / nothing is broken.
 
 ## POM.XML FILE
 
@@ -59,7 +61,7 @@
 
 * Update application.properties by adding h2 inmemory database for proof of concept
 
-## Configurations (no-user and no-auth yet) 
+## Configurations (no-user and no-auth yet)
 
 * Add spring-boot-configuration-processor in the pom.xml
 * Create a config package inside the com.breakingbadspringboot.breakingbad folder
@@ -77,3 +79,13 @@
 ## Seeding the Database
 
 * Create a dataloader class to seed data into an empty database
+
+## REST-Client for Postman/Insomnia Replacement 
+
+* Create REST-Client package in the root directory
+
+## Swagger UI or OpenAPI
+
+* Add springdoc-openapi-ui and springdoc-openapi-data-rest in the pom.xml
+* Write SwaggerConfig configuration in the config package for custom Swagger UI
+* Update the application.properties file with app.name, app.version, and app.description

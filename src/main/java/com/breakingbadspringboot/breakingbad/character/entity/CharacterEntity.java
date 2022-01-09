@@ -4,6 +4,7 @@ import lombok.*;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  and they don't slow down JPA*/
 //@Data
 @Table(name = "character")
-@Entity(name = "character")
+@Entity(name = "characters")
 @NoArgsConstructor
 @AllArgsConstructor
 public class CharacterEntity {
@@ -24,8 +25,7 @@ public class CharacterEntity {
     @Column(name = "char_id", updatable = false, nullable = false)
     private Long  Char_Id;
 
-    @NonNull
-    @Column(name = "name")
+    @NotNull
     private String Name;
     private String Birthday;
 

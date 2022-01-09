@@ -105,6 +105,19 @@
 			<optional>true</optional>
 		</dependency>
 
+		<!-- OpenAPI 3 -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.5.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-data-rest</artifactId>
+			<version>1.5.12</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
