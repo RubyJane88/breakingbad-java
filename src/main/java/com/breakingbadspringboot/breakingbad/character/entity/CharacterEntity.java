@@ -4,7 +4,6 @@ import lombok.*;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
-import java.net.URI;
 import java.util.List;
 import java.util.Objects;
 
@@ -28,18 +27,20 @@ public class CharacterEntity {
     @NonNull
     @Column(name = "name")
     private String Name;
-
     private String Birthday;
 
-
-    private List<String> Occupation;
+    @ElementCollection
+    private List<String> Occupations;
     private String Image;
     private String Status;
     private String Nickname;
 
-    private List<Integer> Appearance;
+    @ElementCollection
+    private List<Integer> Appearances;
     private String Portrayed;
-    private List<String> Category;
+
+    @ElementCollection
+    private List<String> Categories;
 
 
     /*These 2 methods, equals and hashCode, below are required if @Data is not used*/

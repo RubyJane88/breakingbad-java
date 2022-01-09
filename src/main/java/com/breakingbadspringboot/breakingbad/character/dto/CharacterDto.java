@@ -12,13 +12,13 @@ public class CharacterDto {
     private Long Char_Id;
     private String Name;
     private String Birthday;
-    private List<String> Occupation;
+    private List<String> Occupations;
     private String img;
     private String Status;
     private String Nickname;
-    private List<Integer> Appearance;
+    private List<Integer> Appearances;
     private String Portrayed;
-    private List<String> Category;
+    private List<String> Categories;
 
 
 
