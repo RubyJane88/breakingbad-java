@@ -1,5 +1,6 @@
 package com.breakingbadspringboot.breakingbad.config;
 
+import com.breakingbadspringboot.breakingbad.jwt.services.ApplicationUserDetailsService;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +15,9 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig  extends WebSecurityConfigurerAdapter {
+
+    private final ApplicationUserDetailsService userDetailsService;
+
 
     @Bean(name = BeanIds.AUTHENTICATION_MANAGER)
     @Override

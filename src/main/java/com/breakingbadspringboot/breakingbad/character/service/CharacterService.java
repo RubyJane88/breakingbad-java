@@ -28,10 +28,10 @@ public class CharacterService implements CharacterContract {
 
     @Override
     public CharacterEntity findCharacterById(Long id) {
-        return finOrThow(id);
+        return finOrThrow(id);
     }
 
-    private CharacterEntity finOrThow(Long id) {
+    private CharacterEntity finOrThrow(Long id) {
         return characterRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Character not found"));
     }
@@ -49,7 +49,7 @@ public class CharacterService implements CharacterContract {
 
     @Override
     public void updateCharacter(Long id, CharacterEntity character) {
-        finOrThow(id);
+        finOrThrow(id);
         characterRepository.save(character);
 
     }

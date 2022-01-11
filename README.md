@@ -80,7 +80,7 @@
 
 * Create a dataloader class to seed data into an empty database
 
-## REST-Client for Postman/Insomnia Replacement 
+## REST-Client for Postman/Insomnia Replacement
 
 * Create REST-Client package in the root directory
 
@@ -89,3 +89,27 @@
 * Add springdoc-openapi-ui and springdoc-openapi-data-rest in the pom.xml
 * Write SwaggerConfig configuration in the config package for custom Swagger UI
 * Update the application.properties file with app.name, app.version, and app.description
+* run the app and then go to this link: [http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/ (http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/)
+
+## Creating User Entity (for login/register)
+
+* Create a user package under the com.breakingbad folder
+* Add the following packages: entity, dto, service, repository, controller
+* Add a BadRequestException interface inside the exception package
+
+## Creating JWT 
+
+* Create a jwt package under the com.package
+* Create models package under the jwt folder
+* Add the ff files: UserPrincipal, AuthenticationRequest, AuthenticationResponse
+* Create services package and add ApplicationUserDetailsService
+* Add jjwt-api, jjwt-impl, and jjwt-jackson in the pom.xml
+* Write AppProperties configuration in config package. For Jwt for now.
+* Wrte PasswordConfig in config package
+* Create util package under the jwt folder and add JwtUtil class
+* Create filters package under the jwt folder and add JwtRequestFilter class
+* Update the SecurityConfig with UserDetailsService, jwtFilter, configure, and http.addFilterBefore
+* Create controllers package under the jwt folder and add AuthenticateController class
+* Write and auth.http file inside the REST-Client folder
+* Write a users.http file inside the REST-Client folder
+*
