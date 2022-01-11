@@ -97,7 +97,7 @@
 * Add the following packages: entity, dto, service, repository, controller
 * Add a BadRequestException interface inside the exception package
 
-## Creating JWT 
+## Creating JWT
 
 * Create a jwt package under the com.package
 * Create models package under the jwt folder
@@ -112,4 +112,8 @@
 * Create controllers package under the jwt folder and add AuthenticateController class
 * Write and auth.http file inside the REST-Client folder
 * Write a users.http file inside the REST-Client folder
-*
+* Run the application
+* Trigger the POST http://localhost/8080/register
+* Check the response if an object is returned
+* Trigger the POST http://localhost/8080/authenticate
+* Check if a token is returned
