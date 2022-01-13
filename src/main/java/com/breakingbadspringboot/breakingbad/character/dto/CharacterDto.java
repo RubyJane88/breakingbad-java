@@ -3,6 +3,7 @@ package com.breakingbadspringboot.breakingbad.character.dto;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.net.URI;
 import java.util.List;
 
 @Getter
@@ -13,7 +14,7 @@ public class CharacterDto {
     private String Name;
     private String Birthday;
     private List<String> Occupations;
-    private String img;
+    private String Img;
     private String Status;
     private String Nickname;
     private List<Integer> Appearances;

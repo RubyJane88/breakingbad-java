@@ -6,10 +6,9 @@ import com.breakingbadspringboot.breakingbad.character.service.CharacterService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.modelmapper.ModelMapper;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -37,13 +36,43 @@ public class CharacterController {
     }
 
 
-    private CharacterDto convertToDto(CharacterEntity characterEntity) {
-        return mapper.map(characterEntity, CharacterDto.class);
-    }
+@GetMapping("/{id}")
+public CharacterDto getCharacterById(Long id) {
+        return convertToDto(characterService.findCharacterById(id));
+}
 
-    private CharacterEntity convertToEntity(CharacterDto characterDto) {
-        return mapper.map(characterDto, CharacterEntity.class);
-    }
+@DeleteMapping("/{id}")
+public void deleteCharacterById(@PathVariable("id") Long id) {
+        characterService.removeCharacterById(id);
+}
 
+@PostMapping
+public CharacterDto createCharacter(@Valid @RequestBody CharacterDto characterDto) {
+   var entity = convertToEntity(characterDto);
+   var savedEntity = characterService.createCharacter(entity);
+
+   return convertToDto(savedEntity);
 
 }
+
+    @PutMapping("/{id}")
+    public void updateCharacter(@PathVariable("id") Long id, @Valid @RequestBody CharacterDto characterDto) {
+
+        if (!id.equals(characterDto.getChar_Id())) {
+            characterService.updateCharacter(id, convertToEntity(characterDto));
+        }
+    }
+
+
+    private CharacterDto convertToDto(CharacterEntity entity) {
+        return mapper.map(entity, CharacterDto.class);
+    }
+
+    private CharacterEntity convertToEntity(CharacterDto dto) {
+        return mapper.map(dto, CharacterEntity.class);
+    }
+
+
+
+
+    }

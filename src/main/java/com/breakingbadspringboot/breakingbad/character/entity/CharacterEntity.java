@@ -5,6 +5,7 @@ import org.hibernate.Hibernate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.net.URI;
 import java.util.List;
 import java.util.Objects;
 
@@ -31,7 +32,7 @@ public class CharacterEntity {
 
     @ElementCollection
     private List<String> Occupations;
-    private String Image;
+    private String Img;
     private String Status;
     private String Nickname;
 

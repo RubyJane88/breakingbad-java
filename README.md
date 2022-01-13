@@ -117,3 +117,5 @@
 * Check the response if an object is returned
 * Trigger the POST http://localhost/8080/authenticate
 * Check if a token is returned
+
+## Protected Endpoint

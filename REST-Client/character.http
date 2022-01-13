@@ -3,3 +3,41 @@ GET http://localhost:8080/api/v1/characters
 Accept: application/json
 
 ###
+DELETE http://localhost:8080/api/v1/characters/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrYWlyb0BnbWFpbC5jb20iLCJpYXQiOjE2NDE5NDE3NTYsImV4cCI6MTY0MTk3Nzc1Nn0.9yn6E9vXtueTH97I9P92FRPTDoe2YhHonCK923TxHEg
+
+###
+POST http://localhost:8080/api/v1/characters
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrYWlyb0BnbWFpbC5jb20iLCJpYXQiOjE2NDIwMTM3NDMsImV4cCI6MTY0MjA0OTc0M30.3JmIQvXsr9FGKFgPHgRkWYfwNh1O25I2s78ZM3AyKzM
+
+{
+  "img": "https://vignette.wikia.nocookie.net/breakingbad/images/9/95/JesseS5.jpg/revision/latest?cb=20120620012441",
+  "name": "Jesse Pinkman",
+  "status": "Alive",
+  "birthday": "09-24-1985",
+  "occupations": [
+    "Meth Dealer"
+  ],
+  "nickname": "Cap n' Cook",
+  "appearances": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "portrayed": "Aaron Paul",
+  "categories": [
+    "Breaking Bad"
+  ]
+
+
+
+
+
+
+
+}

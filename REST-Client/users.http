@@ -12,7 +12,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "email": "raikko@gmail.com",
+  "email": "kairo@gmail.com",
   "mobileNumber": "9090888777",
   "password": "Pass123!"
 }

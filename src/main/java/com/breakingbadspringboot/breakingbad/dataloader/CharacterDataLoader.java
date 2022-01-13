@@ -32,6 +32,7 @@ public class CharacterDataLoader implements CommandLineRunner {
             occupation.add("Meth Kingpin");
             occupation.add("High School Chemist Teacher");
 
+
             List<Integer> appearances = new LinkedList<>();
             appearances.add(1);
             appearances.add(2);
@@ -51,5 +52,28 @@ public class CharacterDataLoader implements CommandLineRunner {
                 characterRepository.save(character1);
 
         }
+
+        List<String> occupation2 = new LinkedList<>();
+        occupation2.add("Meth Kingpin");
+        occupation2.add("High School Chemist Teacher");
+
+        List<Integer> appearances2 = new LinkedList<>();
+        appearances2.add(1);
+        appearances2.add(2);
+        appearances2.add(3);
+        appearances2.add(4);
+        appearances2.add(5);
+
+        List<String> categories2 = new LinkedList<>();
+        categories2.add("Breaking Bad");
+        categories2.add("Better Call Saul");
+
+        var character2 = new CharacterEntity(1L, "Walter White Jr", "07-08-1993", occupation2,
+                "https://media1.popsugar-assets.com/files/thumbor/WeLUSvbAMS_GL4iELYAUzu7Bpv0/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2018/01/12/910/n/1922283/fb758e62b5daf3c9_TCDBRBA_EC011/i/RJ-Mitte-Walter-White-Jr.jpg", "Deceased",
+                "Flynn", appearances2, "RJ Mitte", categories2 );
+
+        characterRepository.save(character2);
+
     }
-}
+    }
+
